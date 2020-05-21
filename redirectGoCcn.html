@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+const now = new Date();
+var dayOfWk=now.getDay();
+var tmpMonth=(now.getMonth()+1).toString();
+var tmpDay=(now.getDate()-dayOfWk).toString();
+var month = ( tmpMonth.length == 1) ? '0'+tmpMonth :tmpMonth;
+var day = ( tmpDay.length == 1) ? '0'+tmpDay :tmpDay;
+var dateStr = now.getFullYear().toString().slice(-2)+month+day;
+var urlStr='http://media.goccn.net/auddl/spmass/'+dateStr+'SPmass.mp3';
+//console.log(urlStr);  location.replace(urlStr);
+location.replace(urlStr);
+</script>
+
+</body>
+</html> 
