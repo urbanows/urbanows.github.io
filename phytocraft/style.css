@@ -1,0 +1,139 @@
+/* Native Tags Overides */
+
+
+
+A{
+  text-decoration: none;
+  color: RGB(105, 149, 95);
+}
+
+A:hover{
+  text-decoration: none;
+  color: RGB(223, 250, 195);
+}
+
+BODY{
+  font-family: Arial;
+  font-size: 16pt;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+HR{
+  width: 100%;
+  border: solid 2pt RGB(221, 171, 159);
+  
+  }
+
+TABLE{
+  border: 1pt;
+  margin: 0pt;
+}
+
+IMG{
+  border: 0pt;
+}
+
+
+
+/* Content Area styles*/
+
+.content{
+  display:block;
+  padding-top: 20pt;
+  padding-left: 30pt;
+  padding-bottom: 5pt;
+  padding-right: 0pt;
+    
+}
+
+
+.pageHeader{
+  vertical-align: top;
+  font-family: Impact;
+  font-size: 18pt;
+  color: RGB(112, 79, 61); /* dark lavender */
+  padding-bottom: 20pt;
+  }
+
+.pageInstructions{
+  font-size: 12pt;
+  color: RGB(226, 211, 20);/* mustard */
+  font-style: italic;
+  padding-bottom: 2pt;
+}
+
+.pageSubheader{
+  display: inline;
+  font-family: Impact;
+  font-size: 12pt;
+  color: RGB(249,242, 126); /*light yellow  */
+  padding-left: 10pt;
+  padding-top: 2pt;
+}
+
+.paragraph{
+  color: RGB(198, 139, 108); /*light lavender */
+  padding-left: 10pt;
+  padding-bottom: 2pt;
+  font-size: 12pt;
+}
+
+.contact{
+  font-size: 16pt;
+}
+
+.page{
+  padding-top: 2pt;
+}
+
+
+
+/* Navigation Area styles*/
+.navigation{
+   padding-left: 200pt;
+ }
+
+.tab{
+  display: inline;
+  font-size: 12pt;
+  margin-left: 20pt;
+ } 
+
+
+
+/* footer Area styles*/
+
+
+.footer{
+  color: RGB(112, 79, 61);
+  font-size: 10pt;
+  font-style:italic; 
+}
+.annotation{
+   padding-left: 200pt;
+}
+
+/* Header */
+
+.header{        
+  background: black;
+}
+.logo{
+  
+}
+.timeStamp{
+ text-align: left;
+ 
+ 
+ }
+/*Layers*/
+.show {
+	visibility: visible;
+	display: inline;
+}
+.hide {
+	visibility:hidden;
+	display: none;
+}
