@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <!-- Load Leaflet from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="https://unpkg.com/esri-leaflet/dist/esri-leaflet.js"></script>
+
+    <style>
+      html, body, #map {
+        margin:0; padding:0;  width : 100%; height : 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      //Sample data fromm data.Distribution."States/Provinces Raw Data"
+      //  https://vpc-bcb-elasticsearch-rbuiynh3cka5rofnrxnqaek6ny.us-west-2.es.amazonaws.com/bis_pipeline__pipeline_result__usnvc/_search
+      var sampleData=[{"curr_presence_absence_desc": "Unknown/Undetermined", "curr_presence_absence_cd": "?", "dist_confidence_cd": "P", "dist_confidence_desc": "Potential", "ISO_Nation_cd": "US", "Subnation_cd": "CA", "Subnation_name": "California"}, {"curr_presence_absence_desc": "Present", "curr_presence_absence_cd": null, "dist_confidence_cd": "C", "dist_confidence_desc": "Confident"}];
+      var map = L.map('map').setView([45.528, -122.680], 4);
+      L.esri.basemapLayer("Gray").addTo(map);
+
+      var parks = L.esri.dynamicMapLayer({
+        url: "https://gis1.usgs.gov/arcgis/rest/services/CanMexUS_political/MapServer/",
+        //dynamicLayers:[{"id":101,"source":{"type":"mapLayer","mapLayerId":0},"drawingInfo":{"renderer":{"type":"uniqueValue","field1":"STATEABB","uniqueValueInfos":[{"value":"US-CO","label":"CO","symbol":{"color":[0,43,8,128],"type":"esriSFS","style":"esriSFSSolid"}}]}}}]
+        dynamicLayers: buildUniqueValues(sampleData)
+      }).addTo(map);
+
+      function buildUniqueValues(distributions) {
+        var confi_color=[0,43,8,128];
+        var possi_color=[0,43,8,56];
+        var symbolTemplate={"id":101,"source":{"type":"mapLayer","mapLayerId":0},"drawingInfo":{"renderer":{"type":"uniqueValue","field1":"STATEABB","uniqueValueInfos":[{"value":"","label":"","symbol":{"color":[0,255,0,128],"type":"esriSFS","style":"esriSFSSolid"}}]}}}
+        //May need to include a default style: https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-UniqueValueRenderer.html
+        var symbols=[];
+        for (let ii=0;ii<distributions.length;ii++) {
+            if (distributions[ii].dist_confidence_desc)
+                confLvl=distributions[ii].dist_confidence_cd;
+            else confLvl=null;
+            if (distributions[ii].ISO_Nation_cd && distributions[ii].Subnation_cd)
+                stateabb=distributions[ii].ISO_Nation_cd+'-'+distributions[ii].Subnation_cd;
+            else stateabb=null;
+            if (confLvl && stateabb) {
+                symObj=Object.assign({},symbolTemplate)
+                symObj.drawingInfo.renderer.uniqueValueInfos[0].value=stateabb;
+                symObj.drawingInfo.renderer.uniqueValueInfos[0].label=distributions[ii].Subnation_cd;
+                //Also include cases for P, X, N, R?
+                if (confLvl==='C') {
+                    symObj.drawingInfo.renderer.uniqueValueInfos[0].symbol.color=confi_color;
+                }
+                else if (confLvl==='?') {
+                    symObj.drawingInfo.renderer.uniqueValueInfos[0].symbol.color=possi_color;
+                }
+                else {
+                    //Report unexpected condition
+                    console.log(JSON.stringify(symObj));
+                    break;
+                }
+                symbols.push(symObj)
+            }
+        }
+        return symbols;
+      }
+    </script>
+  </body>
+</html>
