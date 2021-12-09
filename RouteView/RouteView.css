@@ -1,0 +1,451 @@
+* {
+	outline: none !important;
+}
+
+body {
+	font-family: Lucida Sans,Lucida Grande,Arial !important;
+	font-size: 13px !important;
+	background: white;
+	color: #333;
+}
+
+button {
+	-webkit-transition: background-color 0.2s linear;
+	border-radius:4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	background-color: #E4F2FF;
+	background-image: url("https://ajax.googleapis.com/ajax/libs/dojo/1.7.4/dijit/themes/claro/form/images/button.png");
+	background-position: center top;
+	background-repeat: repeat-x;
+	border: 1px solid #769DC0;
+	padding: 2px 8px 4px;
+	font-size:1em;
+}
+
+button:hover {
+	background-color: #AFD9FF;
+	color: #000000;
+}
+
+h1 {
+	font-size:1.5em;
+}
+
+.break
+{
+	float:none;
+	clear:both;
+}
+
+/* Any demo specific styling needed for this tutorial only */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+#app_layout {
+    height: 100%;
+}
+
+#id_left_layout {
+    margin: 0;
+    padding: 0;
+}
+
+#id_center_layout {
+    margin: 0;
+    padding: 0;
+}
+
+.claro .demoLayout .edgePanel {
+    background-color: #d0e9fc;
+}
+
+#td_map_canvas {
+    height: 100%;
+}
+
+#id_map_canvas {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#td_panorama {
+    height: 100%;
+}
+
+
+.dijitButtonDisabled .icon_btn_add {
+  background-image: url('icons/btn-plus-disabled.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+}
+
+.icon_btn_add {
+  background-image: url('icons/btn-plus.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none; 
+  outline:none;
+}
+
+.dijitButtonDisabled .icon_btn_remove {
+  background-image: url('icons/btn-remove-disabled.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+}
+
+.icon_btn_remove {
+  background-image: url('icons/btn-remove.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none; 
+  outline:none;
+}
+
+.dijitButtonDisabled .icon_btn_up {
+  background-image: url('icons/btn-up-disabled.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+}
+
+.icon_btn_up {
+  background-image: url('icons/btn-up.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none; 
+  outline:none;
+}
+
+.dijitButtonDisabled .icon_btn_down {
+  background-image: url('icons/btn-down-disabled.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+}
+
+.icon_btn_down {
+  background-image: url('icons/btn-down.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none; 
+  outline:none;
+}
+
+.dijitButtonDisabled .icon_btn_drive {
+  background-image: url('icons/btn-drive-disabled.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+}
+
+.icon_dollar {
+  background-image: url('icons/icon-dollar.png');
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none; 
+  outline:none;
+}
+
+.icon_btn_drive {
+  background-image: url('icons/btn-drive.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none; 
+  outline:none;
+}
+
+.dijitButtonDisabled .icon_btn_browse {
+  background-image: url('icons/btn-browse-disabled.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+}
+
+.icon_btn_browse {
+  background-image: url('icons/btn-browse.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none; 
+  outline:none;
+}
+
+.dijitToggleButtonDisabled .icon_btn_highway {
+  background-image: url('icons/btn-highway-disabled.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+}
+
+.dijitToggleButtonChecked .icon_btn_highway {
+  background-image: url('icons/btn-highway-not-checked.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none; 
+  outline:none;
+}
+
+.icon_btn_highway {
+  background-image: url('icons/btn-highway.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none; 
+  outline:none;
+}
+
+.dijitToggleButtonDisabled .icon_btn_toll {
+  background-image: url('icons/btn-toll-disabled.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+}
+
+.dijitToggleButtonChecked .icon_btn_toll {
+  background-image: url('icons/btn-toll-not-checked.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none; 
+  outline:none;
+}
+
+.icon_btn_toll {
+  background-image: url('icons/btn-toll.png');
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none; 
+  outline:none;
+}
+
+.icon_btn_sliders_thing {
+  background-image: url('icons/btn-sliders-thing.png');
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none; 
+  outline:none;
+}
+
+.icon_btn_map_pano_layout {
+  background-image: url('icons/btn-map-pano-layout.png');
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none; 
+  outline:none;
+}
+
+.icon_btn_map_pano_layout_1 {
+  background-image: url('icons/icon-map-pano-layout_1.png');
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 40px;
+  text-align: center;
+  margin: 2;
+  padding: 2;
+  border: none; 
+}
+
+.dijitButtonSelected .icon_btn_map_pano_layout_1 {
+  background-image: url('icons/icon-map-pano-layout_1.png');
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 40px;
+  text-align: center;
+  margin: 2;
+  padding: 2;
+  border: 3px solid #000000;
+}
+
+.icon_btn_map_pano_layout_2 {
+  background-image: url('icons/icon-map-pano-layout_2.png');
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 40px;
+  text-align: center;
+  margin: 2;
+  padding: 2;
+  border: none; 
+}
+
+.dijitButtonSelected .icon_btn_map_pano_layout_2 {
+  background-image: url('icons/icon-map-pano-layout_2.png');
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 40px;
+  text-align: center;
+  margin: 2;
+  padding: 2;
+  border: 3px solid #000000;
+
+}
+
+.icon_btn_map_pano_layout_3 {
+  background-image: url('icons/icon-map-pano-layout_3.png');
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 40px;
+  text-align: center;
+  margin: 2;
+  padding: 2;
+  border: none; 
+}
+
+.dijitButtonSelected .icon_btn_map_pano_layout_3 {
+  background-image: url('icons/icon-map-pano-layout_3.png');
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 40px;
+  text-align: center;
+  margin: 2;
+  padding: 2;
+  border: 3px solid #000000;
+}
+
+.icon_btn_map_pano_layout_4 {
+  background-image: url('icons/icon-map-pano-layout_4.png');
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 40px;
+  text-align: center;
+  margin: 2;
+  padding: 2;
+  border: none; 
+}
+
+.dijitButtonSelected .icon_btn_map_pano_layout_4 {
+  background-image: url('icons/icon-map-pano-layout_4.png');
+  background-repeat: no-repeat;
+  width: 64px;
+  height: 40px;
+  text-align: center;
+  margin: 2;
+  padding: 2;
+  border: 3px solid #000000;
+}
+
+#id_input_route {
+	background: grey;
+}
+
+.claro .dijitTooltipContainer {
+    background: Khaki;
+}
+
+.gm-style-mtc {
+  display: none;
+}
+
+#marker_tooltip {
+  display: xnone;
+  position:absolute;
+  width: 300px;
+  height: 200px;
+  background-color: #ccc;
+  margin: 15px;
+}
+
+.icon_btn_decrease {
+  background-image: url('icons/btn-decrease.png');
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none; 
+  outline:none;
+}
+
+.dijitButtonDisabled .icon_btn_decrease {
+  background-image: url('icons/btn-decrease-disabled.png');
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+}
+
+.icon_btn_increase {
+  background-image: url('icons/btn-increase.png');
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none; 
+  outline:none;
+}
+
+.dijitButtonDisabled .icon_btn_increase {
+  background-image: url('icons/btn-increase-disabled.png');
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+}
+
